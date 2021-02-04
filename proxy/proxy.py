@@ -3,11 +3,11 @@ from mako.template import Template
 
 Socketsrv = socket.socket(socket.AF_INET , socket.SOCK_STREAM)
 
-HOST = "10.0.0.1"
+HOST = "10.0.0.1" # the static ip ( your cheap vps )
 
-PORT = 2943
+PORT = 2943 # both need to be the same
 
-SECRET = "supersecret"
+SECRET = "supersecret" to have a bit a security 
 
 try:
     Socketsrv.bind((HOST,PORT))
