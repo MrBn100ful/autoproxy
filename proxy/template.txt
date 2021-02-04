@@ -1,0 +1,15 @@
+#date update ${date}
+
+upstream backend_website{
+    server ${ip}:80;
+}
+
+server {
+    listen    80;
+    server_name     mywebsite.com;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://backend_website;
+    }
+}
